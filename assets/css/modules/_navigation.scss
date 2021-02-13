@@ -1,0 +1,22 @@
+.page-numbers {
+    padding: 0;
+    margin: 15px 0;
+
+    list-style: none;
+
+    text-align: center;
+    li {
+        a,
+        span {
+            padding: .25em .75em;
+
+            color: #002749;
+            border: 1px solid #c7c8ca;
+
+            &.current,
+            &.dots {
+                color: rgba(47,47,47,.5);
+            }
+        }
+    }
+}

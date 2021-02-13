@@ -1,0 +1,31 @@
+.breadcrumb {
+    margin-bottom: 10px;
+    ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            margin-top: 0;
+
+            a {
+                margin-right: 10px;
+
+                font-family: $font_bold;
+            }
+
+            span {
+                font-family: $font_basic;
+
+                color: #a29e9e;
+
+                .arrow {
+                    font-size: 14px;
+
+                    color: #d8d4d4;
+                }
+            }
+        }
+    }
+}

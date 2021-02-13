@@ -1,0 +1,21 @@
+.search-result {
+    position: relative;
+
+    .icon {
+        float: left;
+        width: 50px;
+        height: 50px;
+
+        background: url(assets/images/phone-book.svg) 0 0 / cover no-repeat;
+    }
+    .search-result__contact {
+        margin-left: 70px;
+    }
+
+    &::after {
+        display: block;
+        clear: both;
+
+        content: "";
+    }
+}

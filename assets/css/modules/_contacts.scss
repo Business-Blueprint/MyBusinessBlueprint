@@ -1,0 +1,152 @@
+.useful-contacts-secion {
+    .link-to-contactform .btn {
+        display: inline-block;
+        padding: 5px 15px;
+
+        font-family: "Geogrotesque-Bold", sans-serif;
+
+        color: #fff;
+        border-radius: 5px;
+        background: #0076c0;
+
+        &:hover {
+            background: #00578d;
+        }
+    }
+    .grid {
+        &--boxes {
+            margin-top: 20px;
+        }
+    }
+}
+.single-contact {
+    .inner-bottom {
+        span {
+            display: block;
+            min-width: 70px;
+
+            color: #a09e9e;
+        }
+    }
+}
+
+.member-contact-listing {
+    display: flex;
+    margin: 0 -15px;
+
+    flex-wrap: wrap;
+
+    .contact-item {
+        width: 25%;
+        padding: 10px;
+        margin: 0;
+
+        @include breakpoint( 600 ) {
+            width: 50%;
+        }
+        @include breakpoint( 767 ) {
+            width: 33.3333%;
+        }
+        @include breakpoint( 991 ) {
+            width: 25%;
+        }
+
+        > a {
+            display: block;
+            &:hover {
+                box-shadow: 0 1px 6px #e8e3e3;
+            }
+        }
+
+        .inner {
+            width: 100%;
+
+            border: 1px solid #f3f2f2;
+
+            flex-wrap: wrap;
+
+            &:after {
+                display: block;
+                clear: both;
+
+                content: "";
+            }
+        }
+        .image {
+            width: 100%;
+            height: 220px;
+        }
+        .detail {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px 15px;
+
+            text-align: center;
+        }
+        h4 {
+            margin-bottom: 0;
+
+            font-size: 19px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0 0 5px 0;
+
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin: 0 10px 0 0;
+
+                font-size: 14px;
+
+                &:nth-child(2) {
+                    .fa {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .fa {
+                margin-right: 5px;
+
+                color: #7ac143;
+            }
+        }
+        .state {
+            font-size: 16px;
+
+            .fa {
+                margin-right: 5px;
+
+                color: #ddd;
+            }
+        }
+        p {
+            margin-bottom: 5px;
+            margin-left: 17px;
+
+            font-size: 15px;
+            line-height: 1.4;
+
+            color: #8e8d8d;
+
+            span {
+                color: #ddd;
+            }
+        }
+        .company-detail {
+            margin-top: 10px;
+            li {
+                display: block;
+
+                span:nth-child(1) {
+                    display: inline-block;
+                    width: 80px;
+
+                    color: #afaaaa;
+                }
+            }
+        }
+    }
+}

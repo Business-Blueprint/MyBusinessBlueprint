@@ -1,0 +1,27 @@
+.table-default-brand {
+    border-spacing: 0;
+    thead > tr > th {
+        padding: 5px;
+
+        border-spacing: 0;
+
+        border-bottom: 1px solid #ddd;
+        background: #f9f7f7;
+    }
+    tr > td,
+    tr > td {
+        padding: 5px;
+    }
+}
+.table-responsive {
+    @include breakpoint(991) {
+        width: 100%;
+        overflow-x: auto;
+
+        border: 1px solid #ddd;
+
+        table {
+            min-width: 700px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/** =========================
+*   Color Variables
+  ========================= */
+
+$primary_color: #0076c0;
+$secondary_color: #002749;
+$success_color: #79c142;
+$danger_color: #f15d22;
+$lightgray_color: #e6e6e6;
+
+
+/** =========================
+*   Font Variables
+  ========================= */
+
+@include fontface('dinpro', 'assets/fonts/dinpro', 'dinpro-regular');
+@include fontface('dinpro light', 'assets/fonts/dinpro', 'dinpro-light');
+@include fontface('dinpro medium', 'assets/fonts/dinpro', 'dinpro-medium');
+@include fontface('dinpro bold', 'assets/fonts/dinpro', 'dinpro-bold');
+
+$font_basic: 'dinpro', sans-serif;
+$font_light: 'dinpro light', sans-serif;
+$font_lightitalic: 'dinpro', sans-serif;
+$font_medium: 'dinpro medium', sans-serif;
+$font_bold: 'dinpro bold', sans-serif;
+
+
+/** =========================
+*   Alignment Variables
+========================= */
+.text-center {
+	text-align: center;
+}

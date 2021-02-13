@@ -1,0 +1,115 @@
+.upt-consultant {
+    margin-top: 10px;
+    .info {
+        text-align: center;
+
+        &:after {
+            display: block;
+            clear: both;
+
+            content: "";
+        }
+        .info-left {
+            float: left;
+            max-width: 300px;
+
+            border: 1px solid #f7f6f6;
+            border-radius: 5px;
+            background: #fbfafa;
+            -webkit-box-shadow: 0 3px 35px #e0dddd;
+                    box-shadow: 0 3px 35px #e0dddd;
+
+            @include breakpoint(767) {
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+            @include breakpoint(600) {
+            }
+        }
+        .info-right {
+            float: right;
+            width: calc(100% - 300px);
+            padding-left: 50px;
+            margin: 0;
+
+            text-align: left;
+
+            @include breakpoint(767) {
+                float: none;
+                width: 100%;
+                padding: 0;
+            }
+            @include breakpoint(600) {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .name {
+            padding: 0 0 10px 0;
+            margin: 0 0 20px 0;
+
+            font-family: $font_bold;
+            font-size: 22px;
+
+            color: $secondary_color;
+            border-bottom: 1px solid #f5f0f0;
+        }
+    }
+    .list {
+        display: flex;
+        padding: 0 10px;
+        margin: 0 -5px 10px -5px;
+
+        list-style: none;
+
+        text-align: center;
+
+        flex-wrap: wrap;
+
+        li {
+            display: inline-block;
+            width: 50%;
+            padding: 0 5px;
+            margin: 0 0 10px 0;
+
+
+            &:nth-child(1) {
+                .btn {
+                    background: $primary_color;
+                }
+            }
+            &:nth-child(2) {
+                .btn {
+                    background: $success_color;
+                }
+            }
+            &:nth-child(3) {
+                .btn {
+                    background: $danger_color;
+                }
+            }
+            &:nth-child(4) {
+                .btn {
+                    background: $secondary_color;
+                }
+            }
+            .btn {
+                display: block;
+                padding: 5px 15px;
+
+                font-family: $font_bold;
+
+                color: #fff;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $secondary_color;
+                }
+            }
+        }
+    }
+}
+.upt-consultant-note {
+    margin-top: 40px;
+}

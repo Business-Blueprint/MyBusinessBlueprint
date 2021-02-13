@@ -1,0 +1,41 @@
+/**!
+Theme Name: Staging MyBusinessBlueprint
+Theme URI: https://github.com/julycabigas
+Description: A custom theme.
+Version: 1.0
+Author: July Cabigas
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: gulp, boilerpate
+Template: mybusinessblueprint
+Text Domain: dale_beaumont
+*/
+
+@import "partials/mixins";
+
+@import "base/variable";
+
+/* ----------------------------------------------------------------------------
+ * Load Vendors
+ * ------------------------------------------------------------------------- */
+
+
+@import "vendors/bootstrap";
+
+
+@import "partials/helpers";
+
+@import "base/base";
+
+/* ----------------------------------------------------------------------------
+ * Layouts
+ * ------------------------------------------------------------------------- */
+
+
+@import "layout/header";
+@import "layout/footer";
+
+/* ----------------------------------------------------------------------------
+
+ * ------------------------------------------------------------------------- */
+@import "modules/modules";
