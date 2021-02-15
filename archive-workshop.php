@@ -1,8 +1,26 @@
 <?php get_header(); ?>
 
 	<main id="content" class="content" itemscope itemtype="WebPageElement" itemprop="mainContentOfPage" tabindex="-1">
-		<?php get_template_part( 'template-parts/content/header' ); ?>
+		<?php 
+          $image = get_field( 'banner_image', 75199 );
 
+          if ( !empty($image) ) {
+            $img_url = 'style="background-image:url(' . wp_get_attachment_url( $image ) . ');"';
+          }
+          else {
+            $random_number = rand(1, 5); 
+            $img_url = 'style="background: url('. get_stylesheet_directory_uri() .'/assets/images/banner'. $random_number . '.jpg) center center / cover no-repeat;"';
+          }
+        ?>
+        <header class="banner" <?php echo $img_url; ?>>
+                <div class="container">
+                    <h1 class="banner__title" itemprop="headline">
+                        <?php echo get_field( 'banner_title_1', 75199 ); ?>
+                    </h1>
+
+                    <div class="banner__subtitle"></div>
+                </div>
+        </header>
 		<div class="container"> 
 
 			<?php

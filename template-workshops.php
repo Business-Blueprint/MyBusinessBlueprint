@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+/*
+* Template name: Workshop
+*/
+get_header();  ?>
 
 	<main id="content" class="content" itemscope itemtype="WebPageElement" itemprop="mainContentOfPage" tabindex="-1">
         <header class="banner" <?php themezero_the_banner_image(); ?>>
@@ -14,11 +18,12 @@
 		<div class="container"> 
             <div class="inner-content"><?php  echo GET_THE_CONTENT(); ?></div>
 			<?php
-
+wp_reset_postdata();
             if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
             elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
             else { $paged = 1; }
 
+            echo $paged;
             $per_page = 1;
 
             $args = array(
