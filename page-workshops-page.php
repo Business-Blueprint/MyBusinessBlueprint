@@ -1,7 +1,5 @@
 <?php 
-/*
-* Template name: Workshop
-*/
+
 get_header();  ?>
 
 	<main id="content" class="content" itemscope itemtype="WebPageElement" itemprop="mainContentOfPage" tabindex="-1">
@@ -18,12 +16,11 @@ get_header();  ?>
 		<div class="container"> 
             <div class="inner-content"><?php  echo GET_THE_CONTENT(); ?></div>
 			<?php
-wp_reset_postdata();
+             wp_reset_query();
+
             if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
             elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
             else { $paged = 1; }
-
-            echo $paged;
             $per_page = 1;
 
             $args = array(

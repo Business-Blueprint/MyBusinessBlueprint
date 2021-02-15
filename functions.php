@@ -397,8 +397,8 @@ function mbb_create_post_type() {
       'labels' => array(
         'name' => __( 'Workshop' ),
         'singular_name' => __( 'Workshop' ),
-        'menu_name'             => 'Workshop',
-        'name_admin_bar'        => 'Workshop',
+        'menu_name'             => 'Workshops',
+        'name_admin_bar'        => 'Workshops',
         'archives'              => 'Workshop Archives',
         'parent_item_colon'     => 'Parent Workshop:',
         'all_items'             => 'All Workshop',
@@ -425,7 +425,7 @@ function mbb_create_post_type() {
       'menu_icon' => 'dashicons-clipboard',
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'workshops'),
+      'rewrite' => array('slug' => 'workshop'),
       'taxonomies'  => array( 'mybbp_workshop', 'mybbp_video_presenter' ),
       'capability_type'       => 'page',
     )

@@ -24,6 +24,8 @@
 		<div class="container"> 
 
 			<?php
+
+         
             if ( have_posts() ) : $prev_year = 0; $i = 0;
                 while ( have_posts() ) : the_post(); $year = get_the_time( 'Y' );
                     if ( ( $year !== $prev_year ) ) : $prev_year = $year;
