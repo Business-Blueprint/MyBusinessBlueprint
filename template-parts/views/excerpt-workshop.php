@@ -13,6 +13,8 @@
 		</h2>
 		<?php echo get_the_term_list( get_the_ID(), 'mybbp_video_presenter', '<div class="video__presenter">', ', ', '</div>' ); ?>
 	</header>
-
-	<?php get_template_part( 'template-parts/video/downloads' ); ?>
+  
+	<?php 
+   if(!is_page('workshops'))
+	 get_template_part( 'template-parts/video/downloads' ); ?>
 </article>
