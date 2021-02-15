@@ -359,8 +359,77 @@ function mbb_create_post_type() {
       'rewrite' => array('slug' => 'legal-doc'),
       'capability_type'       => 'page',
     )
-  );  
-
+  ); 
+  register_taxonomy( 'mybbp_workshop', array( 'mybbp_series' ), array(
+    'labels'            => array(
+      'name'                       => 'Workshops',
+      'singular_name'              => 'Workshop',
+      'menu_name'                  => 'Workshops',
+      'all_items'                  => 'All Workshops',
+      'parent_item'                => 'Parent Workshop',
+      'parent_item_colon'          => 'Parent Workshop:',
+      'new_item_name'              => 'New Workshop Name',
+      'add_new_item'               => 'Add New Workshop',
+      'edit_item'                  => 'Edit Workshop',
+      'update_item'                => 'Update Workshop',
+      'view_item'                  => 'View Workshop',
+      'separate_items_with_commas' => 'Separate Workshop with commas',
+      'add_or_remove_items'        => 'Add or remove Workshop',
+      'choose_from_most_used'      => 'Choose from the most used',
+      'popular_items'              => 'Popular Workshops',
+      'search_items'               => 'Search Workshops',
+      'not_found'                  => 'Not Found',
+      'no_terms'                   => 'No Workshops',
+      'items_list'                 => 'Workshop list',
+      'items_list_navigation'      => 'Workshop list navigation',
+    ),
+    'hierarchical'      => true,
+    'public'            => true,
+    'show_admin_column' => true,
+    'rewrite'           => array(
+      'slug'         => 'workshops',
+      'with_front'   => true,
+      'hierarchical' => true,
+    ),
+  ) ); 
+  register_post_type( 'workshop',
+    array(
+      'labels' => array(
+        'name' => __( 'Workshop' ),
+        'singular_name' => __( 'Workshop' ),
+        'menu_name'             => 'Workshop',
+        'name_admin_bar'        => 'Workshop',
+        'archives'              => 'Workshop Archives',
+        'parent_item_colon'     => 'Parent Workshop:',
+        'all_items'             => 'All Workshop',
+        'add_new_item'          => 'Add New Workshop',
+        'add_new'               => 'Add Workshop',
+        'new_item'              => 'New Workshop',
+        'edit_item'             => 'Edit Workshop',
+        'update_item'           => 'Update Workshop',
+        'view_item'             => 'View Workshop',
+        'search_items'          => 'Search Workshop',
+        'not_found'             => 'Not found',
+        'not_found_in_trash'    => 'Not found in Trash',
+        'featured_image'        => 'Featured Image',
+        'set_featured_image'    => 'Set featured image',
+        'remove_featured_image' => 'Remove featured image',
+        'use_featured_image'    => 'Use as featured image',
+        'insert_into_item'      => 'Insert into summit',
+        'uploaded_to_this_item' => 'Uploaded to this summit',
+        'items_list'            => 'Workshop list',
+        'items_list_navigation' => 'Workshop list navigation',
+        'filter_items_list'     => 'Filter series list'
+      ),
+      'menu_position' => 22,
+      'menu_icon' => 'dashicons-clipboard',
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'workshop'),
+      'taxonomies'  => array( 'mybbp_workshop', 'mybbp_video_presenter' ),
+      'capability_type'       => 'page',
+    )
+  ); 
 // Start Shareable CPT  
  register_post_type( 'shareable_files',
     array(
@@ -401,6 +470,7 @@ function mbb_create_post_type() {
     )
   ); 
 // END Shareable CPT  
+
 }
 add_action( 'init', 'mbb_create_post_type' );
 
