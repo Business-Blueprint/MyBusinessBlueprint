@@ -425,7 +425,7 @@ function mbb_create_post_type() {
       'menu_icon' => 'dashicons-clipboard',
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'workshop'),
+      'rewrite' => array('slug' => 'workshops'),
       'taxonomies'  => array( 'mybbp_workshop', 'mybbp_video_presenter' ),
       'capability_type'       => 'page',
     )
